@@ -1,11 +1,13 @@
 <template>
+<ClientOnly>
   <vue-navigation-bar :options="navbarOptions" />
+</ClientOnly>
 </template>
 
 <script>
   import VueNavigationBar from "vue-navigation-bar";
-  import Vue from 'vue';
-  Vue.component("vue-navigation-bar", VueNavigationBar);
+  //import Vue from 'vue';
+  //Vue.component("vue-navigation-bar", VueNavigationBar);
   import 'vue-navigation-bar/dist/vue-navigation-bar.css'
 
   export default {
@@ -102,5 +104,15 @@
         }
       }
     }
+    ,components:{
+      VueNavigationBar
+    }
+    // ,
+    // components:{
+    //   VueNavigationBar: () => 
+    //   import ('vue-navigation-bar')
+    //   .then(m => m.VueNavigationBar)
+    //   .catch()
+    // }
   }
 </script>
