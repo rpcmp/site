@@ -1,6 +1,7 @@
 <template>
     <header class="header" :class="{sticky: $route.path === '/' || $route.path.includes('/projects/')}">
-        <div class="container">
+     <NavigationBar />
+        <!-- <div class="container">
             <div class="left">
                 <g-link :to="{ name: 'home' }" class="home-link">
                     <img 
@@ -10,21 +11,25 @@
                     />
                 </g-link>
             </div>
-            <nav class="nav right">
+            <nav class="nav right">                
                 <g-link class="nav__link" to="/journal">Journal</g-link>
                 <g-link class="nav__link" to="/contact">Say Hi!</g-link>
-            </nav>
-        </div>
+            </nav>                        
+        </div> -->
     </header>
 </template>
 
 <script>
+import NavigationBar from "@/components/NavigationBar.vue";
 export default {
   data() {
     return {
         logo: require("../../static/logo.svg"),
         settings: require("../../data/theme.json")
     }
+  },
+  components: {
+    NavigationBar
   }
 }
 </script>
