@@ -1,47 +1,59 @@
-<p align="center">
-  <img src="https://file-xidfrcjkaq.now.sh/" height="240">
-  <h3 align="center">Gridsome x Forestry</h3>
-  <p align="center">A starter-kit by Nichlas W. Andersen<p>
-</p>
+# Сайт РПЦ МП
 
-<p align="center">
-  <a href="https://app.netlify.com/sites/gridsome-forestry/deploys"><img src="https://api.netlify.com/api/v1/badges/21965bf1-8f46-4201-afe9-98896cba865e/deploy-status" alt="Netlify Status"></a>
-</p>
+Русская Пастафарианская Церковь Макаронного Пастриархата
 
+Этот сайт использует статический генератор [gridsome](https://gridsome.org/) для [vue.js](https://vuejs.org/)
 
-## Development
+В основу взят шаблон [itsnwa@gridsome-forestry-starter](https://github.com/itsnwa/gridsome-forestry-starter)
+
+## Ритуал подготовки окружения
+
+### Инициация node.js
+
+Установить nvm
+
+* [Windows](https://github.com/coreybutler/nvm-windows/releases)
+* [Linux и macOS](https://github.com/nvm-sh/nvm)
 
 ```bash
-# install Gridsome globally
-npm install --global @gridsome/cli
+# установить последнюю версию
+nvm install latest
 
-# cd into the project directory
-cd gridsome-forestry-starter
+# созерцать установленные версии
+nvm list
 
-# install dependencies
-npm install
-
-# Start local dev server
-npm run develop
+# выбрать версию для использования
+nvm use xx.x.x
 ```
 
+### Прочие компоненты
 
-## Forestry (Content Management)
+Установить [yarn](https://classic.yarnpkg.com/en/docs/install)
 
-This project has been pre-configured to work with Forestry, just import your repository ✨  
-Any changes you make will be commited back to the repo, and deployed if you're using Netlify.
+Установить глобально `gridsome`:
 
-<p>
-  <a href="https://app.forestry.io/quick-start?repo=itsnwa/gridsome-forestry-starter&amp;provider=github&amp;engine=vuepress" rel="nofollow"><img src="https://camo.githubusercontent.com/2455e97e4e989374a355fb0bea7ad364f2561c92/68747470733a2f2f6173736574732e666f7265737472792e696f2f696d706f72742d746f2d666f7265737472794b2e737667" alt="Import this project into Forestry" data-canonical-src="https://assets.forestry.io/import-to-forestryK.svg" style="max-width:100%;"></a>
-</p>
+```bash
+yarn global add @gridsome/cli
+```
 
+Склонировать этот репозиторий, все дальнейшие команды выполнять из его папки
 
-## Deploy with Netlify
+Инициировать репозиторий:
 
-Import your site in Netlify
+```bash
+yarn
+```
 
-1. Create a new site in Netlify and import your repository.
-2. Set the build command to: `gridsome build`
-3. Set the publish directory to: `dist`
+## Ритуал разработки
 
-That's it, now your site gets deployed automatically on `git push` or when saving documents from Forestry.
+Инициация сервера разработки:
+
+```bash
+yarn develop
+```
+
+Инициация генерации статического контента - необходимо выполнять как минимум один раз перед каждым коммитом:
+
+```bash
+yarn build
+```
