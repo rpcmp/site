@@ -1,5 +1,5 @@
 <template>
-  <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">
+  <div class="layout" :class="{ 'sticky-header': $route.path === '/' }">   
     <Header />
     <slot/>
     <Footer />
@@ -28,7 +28,7 @@ body {
   --color-base: rgb(255, 255, 255);
   --color-base-1: rgb(243, 243, 243);
   --color-contrast: #ffbf00;
-  --color-contrast-1: rgb(43, 43, 43);
+  --color-contrast-1: #ffbc4f;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;
   padding: 0;
