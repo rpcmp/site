@@ -27,7 +27,7 @@ export default {
 body {
   --color-base: rgb(255, 255, 255);
   --color-base-1: rgb(243, 243, 243);
-  --color-contrast: rgb(0, 0, 0);
+  --color-contrast: #ffbf00;
   --color-contrast-1: rgb(43, 43, 43);
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   margin:0;

@@ -70,9 +70,6 @@ export default {
   .project {
     grid-column: auto / span 1;
   }
-  .project:nth-child(3n+1) {
-    grid-column: auto / span 2;
-  }
 }
 
 </style>
